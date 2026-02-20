@@ -1,0 +1,15 @@
+#compdef monero-blockchain-depth
+
+_monero-blockchain-depth() {
+  _arguments \
+    '(- *)--help[Produce help message]' \
+    '--data-dir=[Specify data directory]:data directory:_directories' \
+    '--height=[Get min depth for all txes at this height]:block height' \
+    '--include-coinbase[Include coinbase in the average]' \
+    '--log-level=[0-4 or categories]:log level' \
+    '(--testnet)--stagenet[Run on stagenet.]' \
+    '(--stagenet)--testnet[Run on testnet.]' \
+    '--txid=[Get min depth for this txid]:transaction hash'
+}
+
+_monero-blockchain-depth "$@"

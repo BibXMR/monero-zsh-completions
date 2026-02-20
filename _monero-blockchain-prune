@@ -1,0 +1,14 @@
+#compdef monero-blockchain-prune
+
+_monero-blockchain-prune() {
+  _arguments \
+    '(- *)--help[Produce help message]' \
+    '--copy-pruned-database[Copy database anyway if already pruned]' \
+    '--data-dir=[Specify data directory]:data directory:_directories' \
+    '--db-sync-mode=[Specify sync option, using format \[safe|fast|fastest\]\:\[nrecords_per_sync\].]:mode' \
+    '--log-level=[0-4 or categories]:log level' \
+    '(--testnet)--stagenet[Run on stagenet.]' \
+    '(--stagenet)--testnet[Run on testnet.]'
+}
+
+_monero-blockchain-prune "$@"

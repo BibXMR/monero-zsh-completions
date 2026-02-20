@@ -1,0 +1,14 @@
+#compdef monero-gen-ssl-cert
+
+_monero-gen-ssl-cert() {
+  _arguments \
+    '(- *)--help[Produce help message]' \
+    '(- *)--version[Output version information]' \
+    '--certificate-filename=[Filename to save the certificate]:certificate file:_files' \
+    '--passphrase=[Passphrase with which to encrypt the private key]:passphrase' \
+    '--passphrase-file=[File containing the passphrase with which to encrypt the private key]:passphrase file:_files' \
+    '--private-key-filename=[Filename to save the private key]:key file:_files' \
+    '--prompt-for-passphrase[Prompt for a passphrase with which to encrypt the private key]'
+}
+
+_monero-gen-ssl-cert "$@"

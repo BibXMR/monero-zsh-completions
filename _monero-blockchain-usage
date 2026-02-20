@@ -1,0 +1,13 @@
+#compdef monero-blockchain-usage
+
+_monero-blockchain-usage() {
+  _arguments \
+    '(- *)--help[Produce help message]' \
+    '--log-level=[0-4 or categories]:log level' \
+    '--rct-only[Only work on ringCT outputs]' \
+    '(--testnet)--stagenet[Run on stagenet.]' \
+    '(--stagenet)--testnet[Run on testnet.]' \
+    ':blockchain database directory:_directories'
+}
+
+_monero-blockchain-usage "$@"

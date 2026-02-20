@@ -1,0 +1,15 @@
+#compdef monero-blockchain-prune-known-spent-data
+
+_monero-blockchain-prune-known-spent-data() {
+  _arguments \
+    '(- *)--help[Produce help message]' \
+    '--data-dir=[Specify data directory]:data directory:_directories' \
+    '--dry-run[Do not actually prune]' \
+    '--input=[Path to the known spent outputs file]:input file:_files' \
+    '--log-level=[0-4 or categories]:log level' \
+    '(--testnet)--stagenet[Run on stagenet.]' \
+    '(--stagenet)--testnet[Run on testnet.]' \
+    '--verbose[Verbose output]'
+}
+
+_monero-blockchain-prune-known-spent-data "$@"
